@@ -1,4 +1,5 @@
 .color {
+  margin: 0;
   border: 1px solid black;
   width: 100px;
   height: 100px;
@@ -25,17 +26,19 @@ div#pixel-board {
   display: table;
   border-spacing: 5px;
   background-color: white;
-  border: 1px;
+  border: 1px solid black;
   width: 40px;
   height: 40px;
 
 }
 
 .pixel {
-  display: table-cell;
+  padding: 0;
+  margin: 0;
+  display: inline-block;
   background-color: white;
   width: 5px;
-  border: 1px;
+  border: 1px solid black;
   width: 40px;
   height: 40px;
 }
