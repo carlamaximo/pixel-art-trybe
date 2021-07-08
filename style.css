@@ -25,7 +25,8 @@ div#green {
 div#pixel-board {
   display: table;
   background-color: white;
-  position: relative;
+  margin: 5%;
+  margin-left: 21%;
 
 }
 .line {
@@ -43,4 +44,10 @@ div#pixel-board {
 
 main {
   position: center;
+  padding: 15px;
+  width: 500px;
+  margin: auto;
+}
+header {
+  text-align: center;
 }

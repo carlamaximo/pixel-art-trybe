@@ -1,4 +1,4 @@
-window.onload = documen.querySelector('.black').classList.add('selected');
+window.onload = document.querySelector('.black')
 
 const colorBlack = document.getElementById('black');
 const colorA = document.getElementById('yellow');
@@ -16,14 +16,13 @@ colorC.addEventListener('click', selectedColor);
 
 addEventListener("click", selectedColor)
 
-const colorList = getElementsByClassName('color')
+
 
 function selectedColor(event) {
+  const colorList = getElementsByClassName('color')
   for (let i = 0; i < colorList.length; i += 1) {
   colorList[i].classList.remove('selected');
-  console.log([colorList[i]]);
   }
-  event.target.classList.add('selected');
 } 
 
 
