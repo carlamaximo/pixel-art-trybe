@@ -1,14 +1,35 @@
-const colorBlack = document.getElementsByClassName('color')[0];
-const colorOne = document.getElementsByClassName('color')[1];
-const colorTwo = document.getElementsByClassName('color')[2];
-const colorThree = document.getElementsByClassName('color')[3];
-const initialSize = 5;
+window.onload = documen.querySelector('.black').classList.add('selected');
+
+const colorBlack = document.getElementById('black');
+const colorA = document.getElementById('yellow');
+const colorB = document.getElementById('blue');
+const colorC = document.getElementById('green');
+
+const pixel = document.getElementsByClassName('pixel')
 
 colorBlack.classList.add('selected');
 
-colorBlack.addEventListener('click', selectColor);
-colorOne.addEventListener('click', selectColor);
-colorTwo.addEventListener('click', selectColor);
-colorThree.addEventListener('click', selectColor);
+colorBlack.addEventListener('click', selectedColor);
+colorA.addEventListener('click', selectedColor);
+colorB.addEventListener('click', selectedColor);
+colorC.addEventListener('click', selectedColor);
+
+addEventListener("click", selectedColor)
+
+const colorList = getElementsByClassName('color')
+
+function selectedColor(event) {
+  for (let i = 0; i < colorList.length; i += 1) {
+  colorList[i].classList.remove('selected');
+  console.log([colorList[i]]);
+  }
+  event.target.classList.add('selected');
+} 
 
 
+addEventListener("click", paint)
+
+function paint() {
+  pixel.style.backgroundColor = colorSelected;
+
+}

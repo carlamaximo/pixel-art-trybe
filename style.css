@@ -6,7 +6,7 @@
   display: inline-block;
 }
 
-div#red {
+div#black {
   background-color: black;
 }
 
@@ -24,25 +24,23 @@ div#green {
 
 div#pixel-board {
   display: table;
-  border-spacing: 5px;
   background-color: white;
-  border: 1px solid black;
-  width: 40px;
-  height: 40px;
+  position: relative;
 
 }
-
+.line {
+  display: table-row;
+}
 .pixel {
   padding: 0;
   margin: 0;
-  display: inline-block;
+  display: table-cell;
   background-color: white;
-  width: 5px;
   border: 1px solid black;
   width: 40px;
   height: 40px;
 }
 
-.row { 
-  display: table-row;
+main {
+  position: center;
 }
