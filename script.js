@@ -1,8 +1,7 @@
 // Creating pixels grid by JS
 // Requirement 4
+const pixelBoard = document.getElementById('pixel-board');
 function pixelGrid() {
-  const pixelGrid = document.getElementById('pixel-board');
-
   for (let rows = 0; rows < 5; rows += 1) {
     const row = document.createElement('section');
 
@@ -13,7 +12,7 @@ function pixelGrid() {
       row.appendChild(pixels);
       
     }
-    pixelGrid.appendChild(row);
+    pixelBoard.appendChild(row);
     
   }
 }
@@ -29,3 +28,9 @@ function selectedColor(currentColor) {
 }
 const colorPallete = document.getElementById('color-palette');
 colorPallete.addEventListener("click", selectedColor);
+
+// Requirement 08 - Thanks to Filipe Brochier for your help!
+function paint(event) {
+  event.target.style.backgroundColor = document.querySelector('.selected').style.backgroundColor;
+}
+pixelBoard.addEventListener("click", paint);
