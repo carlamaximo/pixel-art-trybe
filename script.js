@@ -1,5 +1,5 @@
 // Creating pixels grid by JS
-
+// Requirement 4
 function pixelGrid() {
   const pixelGrid = document.getElementById('pixel-board');
 
@@ -18,3 +18,6 @@ function pixelGrid() {
   }
 }
 pixelGrid()
+// Requirement 06
+document.querySelector('#black').classList.add('selected');
+
