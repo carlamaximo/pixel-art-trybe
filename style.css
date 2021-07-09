@@ -6,22 +6,6 @@
   display: inline-block;
 }
 
-div#black {
-  background-color: black;
-}
-
-div#yellow {
-  background-color: yellow;
-}
-
-div#blue {
-  background-color: blue;
-}
-
-div#green {
-  background-color: green;
-} 
-
 div#pixel-board {
   display: table;
   background-color: white;
