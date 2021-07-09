@@ -19,5 +19,13 @@ function pixelGrid() {
 }
 pixelGrid()
 // Requirement 06
-document.querySelector('#black').classList.add('selected');
+document.getElementById('black').classList.add('selected');
 
+// Requirement 07 
+function selectedColor(currentColor) {
+  const lastColorSelected = document.querySelector('.selected');
+  lastColorSelected.classList.remove('selected');
+  currentColor.target.classList.add('selected');
+}
+const colorPallete = document.getElementById('color-palette');
+colorPallete.addEventListener("click", selectedColor);
