@@ -8,6 +8,7 @@ body {
   display: inline-block;
   height: 50px;
   width: 50px;
+  border-radius: 50%;
 }
 
 #pixel-board div {
@@ -38,4 +39,9 @@ section {
 
 button {
   margin-bottom: 25px;
+  box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.397);
+}
+
+input {
+  box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.397);
 }
