@@ -34,3 +34,16 @@ function paint(event) {
   event.target.style.backgroundColor = document.querySelector('.selected').style.backgroundColor;
 }
 pixelBoard.addEventListener("click", paint);
+
+// Requirement 09 
+const btnClear = document.getElementById('clear-board');
+btnClear.innerText = "Limpar"
+
+function clearBoard(eventClear) {
+  const square = document.querySelectorAll('.pixel');
+  for (let i = 0; i < square.length; i += 1) {
+    square[i].style.backgroundColor = null;
+  }
+}
+
+btnClear.addEventListener("click", clearBoard);

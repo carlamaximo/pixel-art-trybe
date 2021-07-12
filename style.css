@@ -27,3 +27,15 @@ body {
   margin:auto;
   margin-bottom: 20px;
 }
+
+.class-btn-clear {
+  position: top;
+}
+
+section {
+  background-color: white;
+}
+
+button {
+  margin-bottom: 25px;
+}
