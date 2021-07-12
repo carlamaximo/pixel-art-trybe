@@ -1,11 +1,11 @@
 // Creating pixels grid by JS
 // Requirement 4
 const pixelBoard = document.getElementById('pixel-board');
-function pixelGrid() {
-  for (let rows = 0; rows < 5; rows += 1) {
+function pixelGrid(input) {
+  for (let rows = 0; rows < input; rows += 1) {
     const row = document.createElement('section');
 
-    for (let columns = 0; columns < 5; columns += 1) {
+    for (let columns = 0; columns < input; columns += 1) {
       const pixels = document.createElement('div')
 
       pixels.classList.add('pixel');
@@ -16,7 +16,7 @@ function pixelGrid() {
     
   }
 }
-pixelGrid()
+pixelGrid(5);
 // Requirement 06
 document.getElementById('black').classList.add('selected');
 
@@ -39,7 +39,7 @@ pixelBoard.addEventListener("click", paint);
 const btnClear = document.getElementById('clear-board');
 btnClear.innerText = "Limpar"
 
-function clearBoard(eventClear) {
+function clearBoard() {
   const square = document.querySelectorAll('.pixel');
   for (let i = 0; i < square.length; i += 1) {
     square[i].style.backgroundColor = null;
@@ -47,3 +47,56 @@ function clearBoard(eventClear) {
 }
 
 btnClear.addEventListener("click", clearBoard);
+
+// Requirement 09
+const BoardBtn = document.getElementById('generate-board');
+const inputBoard = document.getElementById('board-size');
+
+BoardBtn.addEventListener("click", btnVQV);
+
+function sizeMinMax(input) {
+  if (input.value < 5) {
+    input.value = 5;
+    alert('O tamanho mínimo é 5.');
+  } else
+  if (input.value > 50) {
+    input.value = 50;
+    alert('O tamanho máximo é 50.');
+  } else
+  if (input.value >= 5 && input.value <= 50) {
+    input.value = input;
+  }
+  return input.value;
+}
+
+function btnVQV() {
+  if (inputBoard.value === '') {
+    alert ('Board inválido!')
+  } else {
+    sizeMinMax(pixelGrid())
+  }
+}
+
+
+// Requirement 12
+// From: https://www.ti-enxame.com/pt/javascript/gerador-de-cores-aleatorias/967183954/
+function generateColor() {
+  const red = Math.floor(Math.random() * 255);
+  const green = Math.floor(Math.random() * 255);
+  const blue = Math.floor(Math.random() * 255);
+  
+  const rgb = `rgb(${red}, ${green}, ${blue})`;
+  return rgb;
+}
+ 
+  function changeColors() {
+    const colors = document.getElementsByClassName('color');
+  
+    for (let i = 0; i < colors.length; i += 1) {
+      const color = colors[i];
+      if (color !== colors[0]) {
+        color.style.backgroundColor = generateColor();
+      }
+    }
+  }
+changeColors()
