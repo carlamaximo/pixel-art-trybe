@@ -55,26 +55,28 @@ const inputBoard = document.getElementById('board-size');
 BoardBtn.addEventListener("click", btnVQV);
 
 function sizeMinMax(input) {
-  if (input.value < 5) {
-    input.value = 5;
+  if (input < 5 && input > 0) {
+    input = 5;
     alert('O tamanho mínimo é 5.');
   } else
-  if (input.value > 50) {
-    input.value = 50;
+  if (input > 50) {
+    input = 50;
     alert('O tamanho máximo é 50.');
   } else
-  if (input.value >= 5 && input.value <= 50) {
-    input.value = input;
+  if (input >= 5 && input <= 50) {
+    input = input;
   }
-  return input.value;
+  return input;
 }
 
 function btnVQV() {
+  let inputValue = inputBoard.value;
   if (inputBoard.value === '') {
-    alert ('Board inválido!')
-  } else {
-    sizeMinMax(pixelGrid())
+    window.alert('Board inválido!')
   }
+  let newBoard = sizeMinMax(inputValue);
+  pixelBoard.innerHTML='';
+  return pixelGrid(newBoard);
 }
 
 
