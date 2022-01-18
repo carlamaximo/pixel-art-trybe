@@ -12,6 +12,7 @@
   </header>
   <main>
     <p>This was a individual project, which the principal objective was to build a funny way to paint in pixels art.</p>
+    <p>Made on July, 2021.</p>
     <h2>Build with</h2>
     <ul>
       <li>HTML5 semantic</li>
@@ -19,7 +20,7 @@
       <li>Javascript</li>
     </ul>
     <h2>Screenshot</h2>
-    <img src="./images/pixel-art-prject.png">
+    <img src="pixel-art-prject.png">
   </main>
 </body>
 </html>
