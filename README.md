@@ -20,7 +20,9 @@
       <li>Javascript</li>
     </ul>
     <h2>Screenshot</h2>
-    <img src="pixel-art-prject.png">
+    <span>
+      <img src="https://user-images.githubusercontent.com/71015610/150001871-3cb31af2-b225-46e3-adea-793c117a0afe.png" width="600px" />
+    </span>
   </main>
 </body>
 </html>
